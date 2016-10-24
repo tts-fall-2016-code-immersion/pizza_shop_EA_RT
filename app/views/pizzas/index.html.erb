@@ -1,0 +1,17 @@
+<h1>All of Zack's Zas</h1>
+<div class="row">
+<% @pizzas.each do |pizza| %>
+<div class="jumbotron">
+  <center>
+    <h1><%= pizza.name %></h1>
+    <img src="<%= pizza.image %>">
+  </center>
+  <h3>Crust: <%= pizza.crust %></h3>
+  <h3>Sauce: <%= pizza.sauce %></h3>
+  <h3>Toppings: <%= pizza.toppings %></h3>
+  <h3>Cost: $<%= pizza.cost %></h3>
+</div>
+<% end %>
+</div>
+
+<%= link_to 'New Pizza', new_pizza_path, class: "btn btn-primary" %>
